@@ -1,0 +1,65 @@
+---
+title: "The Growing Divide: 33 Seasons of Premier League Inequality"
+subtitle: "How the gap between champions and survival has widened from 35 to 65 points"
+author: "Eric Schnitger"
+date: 2026-04-27
+categories: [data-visualization, python, sports-analytics, web-scraping]
+image: thumbnail.png
+description: |
+ An interactive analysis of every Premier League season from 1992 to 2025,
+ examining title-winning points, relegation survival thresholds, Champions
+ League qualification, and the growing stratification of English football.
+format:
+ html:
+   code-fold: true
+   code-summary: "Show code"
+   code-tools: true
+   toc: true
+   toc-depth: 3
+execute:
+ echo: true
+ warning: false
+ freeze: auto
+---
+
+## The Question
+
+In 1992/93, Manchester United won the first Premier League title with 84 points.
+Coventry City survived relegation with 49. The gap: **35 points**.
+
+In 2019/20, Liverpool won with 99 points. Aston Villa survived with 34.
+The gap: **65 points**.
+
+Is the Premier League becoming a two-tier league? And if so, when did the
+divergence accelerate? This analysis pulls live data from Wikipedia to find out.
+
+## Key Findings
+
+::: {.callout-tip}
+## Summary for the time-pressed
+
+- **Title-winning points have trended upward** at roughly +0.25 points per season
+- **Relegation survival points are flat or declining** at roughly -0.15 points per season
+- **The gap has nearly doubled**, from an average of 42 pts (1990s) to 58 pts (2020s)
+- The sharpest inflection point was **2016/17**, when Pep Guardiola and Jurgen Klopp triggered a points arms race at the top
+- **The same clubs dominate the top 4** with increasing regularity, while relegation remains a revolving door
+:::
+
+## Data Collection
+
+The dataset is scraped live from Wikipedia's season-by-season Premier League
+articles. For each of the 33 completed seasons, the scraper extracts:
+
+- **Champion** and their points total
+- **Top 4 finishers** (Champions League qualifiers since 2001/02)
+- **17th-place finisher** (the lowest team to survive relegation)
+- **Relegated teams** (18th, 19th, 20th)
+
+::: {.callout-note}
+## A note on Champions League spots
+
+The number of CL qualifying places has changed over time. Prior to 1997/98,
+only the champion entered. By 2001/02 the top 4 qualified. This analysis
+always shows the top 4 finishers for consistency, but flags the historical
+context where relevant.
+:::
