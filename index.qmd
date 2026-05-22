@@ -3,6 +3,7 @@ title: "The Growing Divide: 33 Seasons of Premier League Inequality"
 subtitle: "How the gap between champions and survival has widened from 35 to 65 points"
 author: "Eric Schnitger"
 date: 2026-04-27
+updated: 2026-05-21
 categories: [data-visualization, python, sports-analytics, web-scraping]
 image: thumbnail.png
 description: |
@@ -16,10 +17,12 @@ format:
    code-tools: true
    toc: true
    toc-depth: 3
+   self-contained: true
 execute:
  echo: true
  warning: false
  freeze: auto
+jupyter: python3
 ---
 
 ## The Question
@@ -34,6 +37,10 @@ Is the Premier League becoming a two-tier league? And if so, when did the
 divergence accelerate? This analysis pulls live data from Wikipedia to find out.
 
 ## Key Findings
+
+- Title-winning points trend upward (+0.25 pts/season)
+- Relegation survival points are flat or declining
+- The gap has grown from ~35-50 pts to 50-65 pts
 
 ::: {.callout-tip}
 ## Summary for the time-pressed
@@ -63,3 +70,12 @@ only the champion entered. By 2001/02 the top 4 qualified. This analysis
 always shows the top 4 finishers for consistency, but flags the historical
 context where relevant.
 :::
+
+## The Whole Project
+
+::: {.column-page}
+{{< embed PremLeague.ipynb >}}
+:::
+
+The full source notebook is available on
+[GitHub](https://github.com/eschnitger/PremLeague).
